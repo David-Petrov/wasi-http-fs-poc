@@ -1,0 +1,6 @@
+package sunfishcode:hello-wasi-http-with-fs;
+
+world target-world {
+  include wasi:http/proxy@0.2.0;
+  include wasi:filesystem/imports@0.2.0;
+}

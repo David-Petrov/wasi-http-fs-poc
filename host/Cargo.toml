@@ -1,0 +1,20 @@
+[package]
+name = "host"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+wasmtime-wasi-http = "21.0.1"
+wasmtime-cli = "21.0.1"
+wasmtime = "21.0.1"
+wasmtime-wasi = "21.0.1"
+wasi-common = "21.0.1"
+
+tokio = { version = "1.26.0", features = [ "rt", "time" ] }
+anyhow = { version = "1.0.22", default-features = false }
+hyper = "1.0.1"
+http = "1.0.0"
+http-body = "1.0.0"
+http-body-util = "0.1.0"
