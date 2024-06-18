@@ -6,15 +6,20 @@ The plugin part is a modification of [this example](https://github.com/sunfishco
 The host part is a modification of [this test case](https://github.com/bytecodealliance/wasmtime/blob/9f29c6e92629a8552f57fa6b2cec1371bc34f9e8/crates/wasi-http/tests/all/main.rs#L205).
 
 # Usage
+## Necessary dependencies
 
-1. [Install nix](https://github.com/DeterminateSystems/nix-installer) and then `nix develop` from the project root (`.envrc` for `direnv` is also provided; for easily achieving essentialy the same).
+- Using nix:
+[Install nix](https://github.com/DeterminateSystems/nix-installer) and then `nix develop` from the project root (`.envrc` for `direnv` is also provided; for easily achieving essentialy the same).
+- Manually:
+Aside from the rust toolchain defined in `rust-toolchain.toml` (automatically picked up and downloaded by `rustup`), you'll need to install [`cargo-component`](https://github.com/bytecodealliance/cargo-component)
 
-2. Build the plugin using `cargo-component`:
+## Build & run
+1. Build the plugin using `cargo-component`:
    ```
    cd ./plugin1
    cargo component build
    ```
-3. Run the host binary, which loads the built plugin component and sends a simple ping request to it:
+2. Run the host binary, which loads the built plugin component and sends a simple ping request to it:
    ```
    cd ./host
    cargo run
