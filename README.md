@@ -15,12 +15,12 @@ Aside from the rust toolchain defined in `rust-toolchain.toml` (automatically pi
 
 ## Build & run
 1. Build the plugin using `cargo-component`:
-   ```
+   ```bash
    cd ./plugin1
    cargo component build
    ```
 2. Run the host binary, which loads the built plugin component and sends a simple ping request to it:
-   ```
+   ```bash
    cd ./host
    cargo run
    ```
